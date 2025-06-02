@@ -1,4 +1,4 @@
-package com.example.rezeptmedienverwaltung;
+package com.example.rezeptverwaltung;
 
 public class Recipe {
     private int id;

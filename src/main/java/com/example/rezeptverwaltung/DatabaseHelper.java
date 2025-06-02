@@ -1,4 +1,4 @@
-package com.example.rezeptmedienverwaltung;
+package com.example.rezeptverwaltung;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -6,13 +6,7 @@ import java.util.List;
 
 public class DatabaseHelper {
 
-    private static final String DB_URL = "jdbc:sqlite:rezeptmedien.db";
-
-    public static Connection connect() throws SQLException {
-        return DriverManager.getConnection(DB_URL);
-    }
-
-//    private static final String DB_URL = "jdbc:mysql://localhost:3306/rezeptmedien";
+    //    private static final String DB_URL = "jdbc:mysql://localhost:3306/rezeptmedien";
 //    private static final String DB_USER = "root";
 //    private static final String DB_PASSWORD = "";
 //
@@ -20,17 +14,22 @@ public class DatabaseHelper {
 //        return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 //    }
 
+    private static final String DB_URL = "jdbc:sqlite:rezept.db";
+
+    public static Connection connect() throws SQLException {
+        return DriverManager.getConnection(DB_URL);
+    }
 
     public static void createTablesIfNotExists() {
         String sql = "CREATE TABLE IF NOT EXISTS recipes (" +
-                "id INT NOT NULL AUTO_INCREMENT," +
-                "name VARCHAR(255) NOT NULL," +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "name TEXT NOT NULL," +
                 "ingredients TEXT," +
                 "instructions TEXT," +
-                "time INT," +
-                "difficulty INT," +
-                "PRIMARY KEY (id)" +
+                "time INTEGER," +
+                "difficulty INTEGER" +
                 ")";
+
 
         try (Connection conn = connect(); Statement stmt = conn.createStatement()) {
             stmt.execute(sql);

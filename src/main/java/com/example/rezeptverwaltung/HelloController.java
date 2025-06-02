@@ -1,4 +1,4 @@
-package com.example.rezeptmedienverwaltung;
+package com.example.rezeptverwaltung;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

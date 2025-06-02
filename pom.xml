@@ -85,7 +85,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.rezeptmedienverwaltung/com.example.rezeptmedienverwaltung.HelloApplication
+                                com.example.rezeptmedienverwaltung/com.example.rezeptverwaltung.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

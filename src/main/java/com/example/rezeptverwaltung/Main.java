@@ -1,4 +1,4 @@
-package com.example.rezeptmedienverwaltung;
+package com.example.rezeptverwaltung;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -16,14 +16,14 @@ public class Main extends Application {
         // Tabelle erstellen, falls sie noch nicht existiert
         DatabaseHelper.createTablesIfNotExists();
 
-        stage.setTitle("Rezept- & Medienverwaltung");
+        stage.setTitle("Rezeptverwaltung");
 
         TabPane tabPane = new TabPane();
 
         Tab recipeTab = new Tab("Rezepte", new RecipeView());
-        Tab mediaTab = new Tab("Medien", new MediaView());
+        //Tab mediaTab = new Tab("Medien", new MediaView());
 
-        tabPane.getTabs().addAll(recipeTab, mediaTab);
+        tabPane.getTabs().addAll(recipeTab);
 
         Scene scene = new Scene(tabPane, 600, 400);
         stage.setScene(scene);

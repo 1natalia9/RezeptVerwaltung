@@ -5,6 +5,6 @@ module com.example.rezeptmedienverwaltung {
 
     requires com.dlsc.formsfx;
 
-    opens com.example.rezeptmedienverwaltung to javafx.fxml;
-    exports com.example.rezeptmedienverwaltung;
+    opens com.example.rezeptverwaltung to javafx.fxml;
+    exports com.example.rezeptverwaltung;
 }

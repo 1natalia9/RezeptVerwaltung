@@ -1,4 +1,4 @@
-package com.example.rezeptmedienverwaltung;
+package com.example.rezeptverwaltung;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
