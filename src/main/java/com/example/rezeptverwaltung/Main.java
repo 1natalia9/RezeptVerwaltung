@@ -6,6 +6,9 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.stage.Stage;
 
+/**
+ * Die Hauptklasse zum Starten der Rezeptverwaltungsanwendung.
+ */
 public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
@@ -13,7 +16,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) {
-        // Tabelle erstellen, falls sie noch nicht existiert
+        // Erstellt die Tabelle, falls sie noch nicht existiert
         DatabaseHelper.createTablesIfNotExists();
 
         stage.setTitle("Rezeptverwaltung");
@@ -21,7 +24,6 @@ public class Main extends Application {
         TabPane tabPane = new TabPane();
 
         Tab recipeTab = new Tab("Rezepte", new RecipeView());
-        //Tab mediaTab = new Tab("Medien", new MediaView());
 
         tabPane.getTabs().addAll(recipeTab);
 
@@ -29,6 +31,4 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.show();
     }
-
 }
-
